@@ -22,6 +22,12 @@ install(TARGETS
   my_msg_test_cpp
   DESTINATION lib/${PROJECT_NAME})
 
+install(PROGRAMS
+  ros_study_mix/my_msg_test.py
+  DESTINATION lib/${PROJECT_NAME}
+
+)
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights
