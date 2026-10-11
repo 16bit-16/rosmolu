@@ -7,9 +7,20 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(ros_study_msgs REQUIRED)
+find_package(ament_cmake_python REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
+ament_python_install_package(${PROJECT_NAME})
+
+add_executable(my_msg_test_cpp src/my_msg_test.cpp)
+ament_target_dependencies(my_msg_test_cpp rclcpp ros_study_msgs)
+
+install(TARGETS
+  my_msg_test_cpp
+  DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
