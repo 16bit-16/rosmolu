@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import rclpy #ros2 파이썬 라이브러리
 from rclpy.node import Node #프로세스 단위의 클래스
 from rclpy.qos import QoSProfile #라디오 주파수 같은 개념

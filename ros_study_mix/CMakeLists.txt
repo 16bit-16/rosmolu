@@ -25,7 +25,7 @@ install(TARGETS
 install(PROGRAMS
   ros_study_mix/my_msg_test.py
   DESTINATION lib/${PROJECT_NAME}
-
+  RENAME argument_py
 )
 
 if(BUILD_TESTING)
